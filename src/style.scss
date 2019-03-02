@@ -1,0 +1,98 @@
+$font-stack: 'Monoton', cursive;
+$font-stack1: 'Libre Barcode 128 Text', cursive;
+$primary-color: #000;
+$secondary-color: #fff;
+$green: #33d399;
+
+body{
+    background-color: $primary-color !important;
+    color: $secondary-color;
+    overflow-y: -webkit-paged-y;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+// .navbar-brand{
+//     font-family: $font-stack !important;
+//     font-size: 4em;
+//     color: $secondary-color;
+//     transition: 1000ms ease;
+//     -webkit-transition: 900ms ease;
+//     // position: fixed;
+// }
+// .navbar-brand:focus, .navbar-brand:hover {
+//     color: $green;
+//     transition: 2000ms ease;
+//     -webkit-transition: 900ms ease;
+// }
+// .navbar {
+//   position: fixed;
+//   display: -ms-flexbox;
+//   display: -webkit-box;
+//   left: 0;
+//   display: flex;
+//   -ms-flex-wrap: wrap;
+//   flex-wrap: wrap;
+//   -ms-flex-align: center;
+//   right: 0;
+//   -webkit-box-align: center;
+//   align-items: center;
+//   -ms-flex-pack: justify;
+//   -webkit-box-pack: justify;
+//   justify-content: space-between;
+//   padding: .5rem 1rem;
+// }
+
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex; 
+  margin: auto; 
+}
+h3{
+  margin: auto; /* Important */ 
+  text-align: center;
+  font-family: $font-stack;
+  font-size: 10em;
+}
+a{
+  margin: auto; /* Important */ 
+  text-align: center;
+  font-family: $font-stack;
+  font-size: 1em;
+  color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover{
+  text-decoration: none
+}
+h3:hover{
+  color:$green;
+}
+
+@media only screen and (max-width: 425px) {
+  h3 {
+    margin: auto;
+    text-align: center;
+    font-family: "Monoton", cursive;
+    font-size: 4em;
+}
+}
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #33d399; 
+  }
+  
