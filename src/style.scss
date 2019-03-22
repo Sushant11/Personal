@@ -49,11 +49,77 @@ section {
   display: flex; 
   margin: auto; 
 }
+$colors: #34a555, #E9F1DF, #56D9CD, #00d3ff, white;
+$max: length($colors);
+$dash: 70;
+$dash-gap: 10;
+$dash-space: $dash * ($max - 1) + $dash-gap * $max;
+$time: 6s;
+$time-step: $time/$max;
+
+/* Main styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.text {
+  fill: none;
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke 6s infinite linear;
+    animation: stroke 10s infinite linear;
+  
+  @for $item from 1 through $max {
+    &:nth-child(#{$max}n + #{$item}) {
+      $color: nth($colors, $item);
+      stroke: $color;
+      -webkit-animation-delay: -($time-step * $item);
+      animation-delay: -($time-step * $item);
+    }
+  }
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -($dash + $dash-gap) * $max;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -($dash + $dash-gap) * $max;
+  }
+}
+
+/* Other styles */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #111;
+  background-size: .2em 100%;
+  font: 5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+    /* width: 100%; */
+    top: 0;
+    /* height: 100%; */
+    margin: auto;
+    left: 0;
+}
 h3{
   margin: auto; /* Important */ 
   text-align: center;
   font-family: $font-stack;
-  font-size: 10em;
+  font-size: 2em;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 a{
   margin: auto; /* Important */ 
@@ -68,7 +134,9 @@ a:hover{
   text-decoration: none
 }
 h3:hover{
-  color:$green;
+  background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (max-width: 425px) {

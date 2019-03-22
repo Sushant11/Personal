@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
 body {
   background-color: #000 !important;
   color: #fff;
@@ -18,12 +19,91 @@ section {
   margin: auto;
 }
 
+/* Main styles */
+.text {
+  fill: none;
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 10s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #34a555;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+.text:nth-child(5n + 2) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #00d3ff;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: white;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+/* Other styles */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #111;
+  background-size: .2em 100%;
+  font: 5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+  /* width: 100%; */
+  top: 0;
+  /* height: 100%; */
+  margin: auto;
+  left: 0;
+}
+
 h3 {
   margin: auto;
   /* Important */
   text-align: center;
   font-family: "Monoton", cursive;
-  font-size: 10em;
+  font-size: 2em;
+  background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#330867));
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a {
@@ -42,7 +122,10 @@ a:hover {
 }
 
 h3:hover {
-  color: #33d399;
+  background: -webkit-gradient(linear, left top, right top, from(#59ddde), to(#5e1bb0));
+  background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (max-width: 425px) {
