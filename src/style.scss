@@ -116,7 +116,7 @@ h3{
   margin: auto; /* Important */ 
   text-align: center;
   font-family: $font-stack;
-  font-size: 2em;
+  font-size: 1em;
   background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -126,7 +126,7 @@ a{
   margin: auto; /* Important */ 
   text-align: center;
   font-family: $font-stack;
-  font-size: 1em;
+  font-size: 2em;
   color: #fff;
     text-decoration: none;
     background-color: transparent;
@@ -142,12 +142,12 @@ h3:hover{
   text-transform: capitalize;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 625px) {
   h3 {
     margin: auto;
     text-align: center;
     font-family: "Monoton", cursive;
-    font-size: 4em;
+    font-size: 50%;
 }
 }
   ::-webkit-scrollbar {
