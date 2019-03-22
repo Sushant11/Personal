@@ -119,6 +119,7 @@ h3{
   font-size: 2em;
   background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
 	-webkit-background-clip: text;
+	background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 a{
@@ -136,7 +137,9 @@ a:hover{
 h3:hover{
   background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
 	-webkit-background-clip: text;
+	background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
 }
 
 @media only screen and (max-width: 425px) {
