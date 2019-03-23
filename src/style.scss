@@ -13,36 +13,7 @@ body{
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
 }
-// .navbar-brand{
-//     font-family: $font-stack !important;
-//     font-size: 4em;
-//     color: $secondary-color;
-//     transition: 1000ms ease;
-//     -webkit-transition: 900ms ease;
-//     // position: fixed;
-// }
-// .navbar-brand:focus, .navbar-brand:hover {
-//     color: $green;
-//     transition: 2000ms ease;
-//     -webkit-transition: 900ms ease;
-// }
-// .navbar {
-//   position: fixed;
-//   display: -ms-flexbox;
-//   display: -webkit-box;
-//   left: 0;
-//   display: flex;
-//   -ms-flex-wrap: wrap;
-//   flex-wrap: wrap;
-//   -ms-flex-align: center;
-//   right: 0;
-//   -webkit-box-align: center;
-//   align-items: center;
-//   -ms-flex-pack: justify;
-//   -webkit-box-pack: justify;
-//   justify-content: space-between;
-//   padding: .5rem 1rem;
-// }
+
 
 section {
   height: 100vh;
