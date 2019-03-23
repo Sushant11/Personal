@@ -19,37 +19,52 @@ section {
   margin: auto;
 }
 
+section div {
+  text-align: center;
+  width: 100%;
+}
+
+section div h4 {
+  margin: 20px;
+  font-family: "Bungee Inline", cursive;
+  background: -webkit-gradient(linear, left top, left bottom, from(#59ddde), to(#5e1bb0));
+  background: linear-gradient(to bottom, #59ddde 0%, #5e1bb0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Main styles */
 .text {
   fill: none;
   stroke-width: 1px;
   stroke-linejoin: miter;
-  stroke-dasharray: 70 330;
+  stroke-dasharray: 150 300;
   stroke-dashoffset: 0;
   -webkit-animation: stroke 6s infinite linear;
-  animation: stroke 10s infinite linear;
+  animation: stroke 8s infinite linear;
 }
 
 .text:nth-child(5n + 1) {
-  stroke: #34a555;
+  stroke: #0cc1ce;
   -webkit-animation-delay: -1.2s;
   animation-delay: -1.2s;
 }
 
 .text:nth-child(5n + 2) {
-  stroke: #E9F1DF;
+  stroke: #fff;
   -webkit-animation-delay: -2.4s;
   animation-delay: -2.4s;
 }
 
 .text:nth-child(5n + 3) {
-  stroke: #56D9CD;
+  stroke: #4d4dff;
   -webkit-animation-delay: -3.6s;
   animation-delay: -3.6s;
 }
 
 .text:nth-child(5n + 4) {
-  stroke: #00d3ff;
+  stroke: #00ff62bd;
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
@@ -62,13 +77,13 @@ section {
 
 @-webkit-keyframes stroke {
   100% {
-    stroke-dashoffset: -400;
+    stroke-dashoffset: -475;
   }
 }
 
 @keyframes stroke {
   100% {
-    stroke-dashoffset: -400;
+    stroke-dashoffset: -475;
   }
 }
 
@@ -88,7 +103,7 @@ body {
 svg {
   position: absolute;
   /* width: 100%; */
-  top: 0;
+  top: 10%;
   /* height: 100%; */
   margin: auto;
   left: 0;
@@ -98,20 +113,22 @@ h3 {
   margin: auto;
   /* Important */
   text-align: center;
-  font-family: "Monoton", cursive;
-  font-size: 1em;
-  background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#330867));
-  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  font-family: 'Major Mono Display', monospace;
+  background: -webkit-gradient(linear, left top, right top, from(#59ddde), to(#5e1bb0));
+  background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.1em;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 a {
   margin: auto;
   /* Important */
   text-align: center;
-  font-family: "Monoton", cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 2em;
   color: #fff;
   text-decoration: none;
@@ -123,20 +140,56 @@ a:hover {
 }
 
 h3:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#59ddde), to(#5e1bb0));
-  background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
+  font-size: 1em;
+  background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#330867));
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-transform: capitalize;
 }
 
-@media only screen and (max-width: 625px) {
+.work {
+  padding: 20px;
+}
+
+#contact a {
+  color: black !important;
+  font-family: "Megrim", cursive;
+  font-size: 1em;
+}
+
+h5 {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 768px) {
   h3 {
     margin: auto;
     text-align: center;
-    font-family: "Monoton", cursive;
-    font-size: 0.5em !important;
+    font-size: 60px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  svg {
+    position: absolute;
+    /* width: 100%; */
+    top: 30%;
+    /* height: 100%; */
+    margin: auto;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  svg {
+    position: absolute;
+    /* width: 100%; */
+    top: 40%;
+    /* height: 100%; */
+    margin: auto;
+    left: 0;
   }
 }
 
@@ -151,10 +204,43 @@ h3:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#59ddde), to(#5e1bb0));
+  background: linear-gradient(to bottom, #59ddde 0%, #5e1bb0 100%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #33d399;
+}
+
+.modal-dialog {
+  top: 20%;
+}
+
+.modal-content {
+  background-color: white !important;
+  font-size: .5em;
+}
+
+.modal-header {
+  border-bottom: 0px solid #dee2e6;
+}
+
+.modal-footer {
+  border-top: 0px solid #dee2e6;
+}
+
+.modal-header .close {
+  padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto;
+  color: black;
+}
+
+.modal-footer .btn {
+  background: #000;
+  color: white;
+}
+
+.modal-body img {
+  height: 80px;
 }
 /*# sourceMappingURL=style.css.map */

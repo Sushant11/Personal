@@ -1,5 +1,7 @@
-$font-stack: 'Monoton', cursive;
-$font-stack1: 'Libre Barcode 128 Text', cursive;
+$bungee: 'Bungee Inline', cursive;
+$twop: 'Press Start 2P', cursive;
+$megrim: 'Megrim', cursive;;
+$bungeeshade: 'Bungee Shade', cursive;
 $primary-color: #000;
 $secondary-color: #fff;
 $green: #33d399;
@@ -49,10 +51,23 @@ section {
   display: flex; 
   margin: auto; 
 }
-$colors: #34a555, #E9F1DF, #56D9CD, #00d3ff, white;
+section div{
+  text-align: center;
+    width: 100%;
+}
+section div h4{
+  margin: 20px;
+    font-family: $bungee;
+    background: linear-gradient(to bottom, #59ddde 0%, #5e1bb0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+$colors:#0cc1ce,  #fff,#4d4dff ,#00ff62bd , white ;
 $max: length($colors);
-$dash: 70;
-$dash-gap: 10;
+$dash: 80;
+$dash-gap: 15;
 $dash-space: $dash * ($max - 1) + $dash-gap * $max;
 $time: 6s;
 $time-step: $time/$max;
@@ -64,10 +79,10 @@ $time-step: $time/$max;
   fill: none;
     stroke-width: 1px;
     stroke-linejoin: miter;
-    stroke-dasharray: 70 330;
+    stroke-dasharray: 150 300;
     stroke-dashoffset: 0;
     -webkit-animation: stroke 6s infinite linear;
-    animation: stroke 10s infinite linear;
+    animation: stroke 8s infinite linear;
   
   @for $item from 1 through $max {
     &:nth-child(#{$max}n + #{$item}) {
@@ -107,7 +122,7 @@ body {
 svg {
   position: absolute;
     /* width: 100%; */
-    top: 0;
+    top: 10%;
     /* height: 100%; */
     margin: auto;
     left: 0;
@@ -115,40 +130,74 @@ svg {
 h3{
   margin: auto; /* Important */ 
   text-align: center;
-  font-family: $font-stack;
-  font-size: 1em;
-  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  font-family: 'Major Mono Display', monospace;
+  background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.1em;
+ 
+  // text-transform: capitalize;
+  transition: all 500ms ease-in-out;
 }
 a{
   margin: auto; /* Important */ 
   text-align: center;
-  font-family: $font-stack;
+  font-family: $twop;
   font-size: 2em;
   color: #fff;
     text-decoration: none;
     background-color: transparent;
 }
 a:hover{
-  text-decoration: none
+  text-decoration: none;
 }
 h3:hover{
-  background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
+  font-size: 1em;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-transform: capitalize;
 }
-
-@media only screen and (max-width: 625px) {
+.work{
+  padding: 20px;;
+}
+#contact a{
+  color:black !important;
+  font-family: $megrim;
+  font-size: 1em;
+}
+h5{
+  font-family: monospace;
+  font-size: 1em;
+}
+@media only screen and (max-width: 768px) {
   h3 {
     margin: auto;
     text-align: center;
-    font-family: "Monoton", cursive;
-    font-size:0.5em !important;
+    font-size:60px !important;
 }
+}
+
+@media only screen and (max-width: 1024px) {
+  svg {
+    position: absolute;
+      /* width: 100%; */
+      top: 30%;
+      /* height: 100%; */
+      margin: auto;
+      left: 0;
+  }
+}
+@media only screen and (max-width: 425px) {
+  svg {
+    position: absolute;
+      /* width: 100%; */
+      top: 40%;
+      /* height: 100%; */
+      margin: auto;
+      left: 0;
+  }
 }
   ::-webkit-scrollbar {
     width: 3px;
@@ -161,9 +210,34 @@ h3:hover{
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #fff; 
+    background: linear-gradient(to bottom, #59ddde 0%, #5e1bb0 100%);
+; 
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #33d399; 
   }
-  
+  .modal-dialog{
+    top: 20%;
+  }
+  .modal-content{
+    background-color: white !important;
+    font-size: .5em;
+  }
+  .modal-header{
+    border-bottom: 0px solid #dee2e6;
+  }
+  .modal-footer{
+    border-top: 0px solid #dee2e6;
+  }
+  .modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+    color: black;
+}
+.modal-footer .btn{
+  background:  #000;
+  color: white;
+}
+.modal-body img{
+  height: 80px;
+}
