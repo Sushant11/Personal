@@ -24,12 +24,6 @@ body{
   position: relative;
   // align-self: flex-start;
 }
-.cube h3{
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .cube svg{
   position: absolute;
     top: 50%;
@@ -194,4 +188,12 @@ h5{
 }
 .modal-body img{
   height: 80px;
+}
+@media screen and (min-width: 765px) {
+  .cube h3{
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
 }
