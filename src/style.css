@@ -3,35 +3,40 @@ body {
   background-color: #000 !important;
   color: #fff;
   overflow-y: -webkit-paged-y;
-  -ms-scroll-snap-points-y: repeat(100vh);
-      scroll-snap-points-y: repeat(100vh);
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
 }
 
-section {
-  height: 100vh;
-  width: 100vw;
-  scroll-snap-align: start;
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-section div {
+.cube {
+  height: 50vh;
   text-align: center;
-  width: 100%;
+  position: relative;
 }
 
-section div h4 {
-  margin: 20px;
-  font-family: "Bungee Inline", cursive;
-  background: -webkit-gradient(linear, left top, left bottom, from(#59ddde), to(#5e1bb0));
-  background: linear-gradient(to bottom, #59ddde 0%, #5e1bb0 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.cube h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cube svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /* Main styles */
@@ -102,26 +107,21 @@ body {
 
 svg {
   position: absolute;
-  /* width: 100%; */
-  top: 10%;
-  /* height: 100%; */
   margin: auto;
   left: 0;
 }
 
 h3 {
-  margin: auto;
-  /* Important */
-  text-align: center;
-  font-family: 'Major Mono Display', monospace;
+  font-family: "Megrim", cursive;
   background: -webkit-gradient(linear, left top, right top, from(#59ddde), to(#5e1bb0));
   background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.1em;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+  font-size: .5em;
+  font-weight: bold;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 a {
@@ -129,7 +129,7 @@ a {
   /* Important */
   text-align: center;
   font-family: "Press Start 2P", cursive;
-  font-size: 2em;
+  font-size: 1em;
   color: #fff;
   text-decoration: none;
   background-color: transparent;
@@ -140,20 +140,26 @@ a:hover {
 }
 
 h3:hover {
-  font-size: 1em;
+  font-size: .7em;
   background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#330867));
   background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .work {
   padding: 20px;
 }
 
+.work img {
+  background: #fff;
+  padding: 2px;
+}
+
 #contact a {
-  color: black !important;
   font-family: "Megrim", cursive;
   font-size: 1em;
 }
@@ -161,36 +167,6 @@ h3:hover {
 h5 {
   font-family: monospace;
   font-size: 1em;
-}
-
-@media only screen and (max-width: 768px) {
-  h3 {
-    margin: auto;
-    text-align: center;
-    font-size: 60px !important;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  svg {
-    position: absolute;
-    /* width: 100%; */
-    top: 30%;
-    /* height: 100%; */
-    margin: auto;
-    left: 0;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  svg {
-    position: absolute;
-    /* width: 100%; */
-    top: 40%;
-    /* height: 100%; */
-    margin: auto;
-    left: 0;
-  }
 }
 
 ::-webkit-scrollbar {
@@ -217,7 +193,7 @@ h5 {
 }
 
 .modal-content {
-  background-color: white !important;
+  background-color: transparent !important;
   font-size: .5em;
 }
 
@@ -229,10 +205,19 @@ h5 {
   border-top: 0px solid #dee2e6;
 }
 
-.modal-header .close {
-  padding: 1rem 1rem;
-  margin: -1rem -1rem -1rem auto;
-  color: black;
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  /* text-shadow: 0 1px 0 #fff; */
+}
+
+.close:hover {
+  color: #fff;
+  /* text-shadow: 0 1px 0 #fff; */
+  opacity: .5;
 }
 
 .modal-footer .btn {

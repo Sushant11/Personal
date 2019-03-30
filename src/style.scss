@@ -10,29 +10,31 @@ body{
     background-color: $primary-color !important;
     color: $secondary-color;
     overflow-y: -webkit-paged-y;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
+    // scroll-snap-points-y: repeat(100vh);
+    // scroll-snap-type: y mandatory;
 }
-
-
-section {
-  height: 100vh;
-  width: 100vw;
-  scroll-snap-align: start;
-  display: flex; 
-  margin: auto; 
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-section div{
+.cube{
+  height:50vh;
   text-align: center;
-    width: 100%;
+  position: relative;
+  // align-self: flex-start;
 }
-section div h4{
-  margin: 20px;
-    font-family: $bungee;
-    background: linear-gradient(to bottom, #59ddde 0%, #5e1bb0 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.cube h3{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cube svg{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 $colors:#0cc1ce,  #fff,#4d4dff ,#00ff62bd , white ;
@@ -92,30 +94,25 @@ body {
 
 svg {
   position: absolute;
-    /* width: 100%; */
-    top: 10%;
-    /* height: 100%; */
     margin: auto;
     left: 0;
 }
 h3{
-  margin: auto; /* Important */ 
-  text-align: center;
-  font-family: 'Major Mono Display', monospace;
+  font-family: $megrim;
   background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.1em;
- 
+  font-size: .5em;
+  font-weight: bold;
   // text-transform: capitalize;
-  transition: all 500ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 a{
   margin: auto; /* Important */ 
   text-align: center;
   font-family: $twop;
-  font-size: 2em;
+  font-size:1em;
   color: #fff;
     text-decoration: none;
     background-color: transparent;
@@ -124,51 +121,28 @@ a:hover{
   text-decoration: none;
 }
 h3:hover{
-  font-size: 1em;
+  font-size: .7em;
   background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 300ms ease-in-out;
 }
 .work{
   padding: 20px;;
 }
+.work img{
+  background: #fff;
+  padding: 2px;
+}
 #contact a{
-  color:black !important;
+  // color:black !important;
   font-family: $megrim;
   font-size: 1em;
 }
 h5{
   font-family: monospace;
   font-size: 1em;
-}
-@media only screen and (max-width: 768px) {
-  h3 {
-    margin: auto;
-    text-align: center;
-    font-size:60px !important;
-}
-}
-
-@media only screen and (max-width: 1024px) {
-  svg {
-    position: absolute;
-      /* width: 100%; */
-      top: 30%;
-      /* height: 100%; */
-      margin: auto;
-      left: 0;
-  }
-}
-@media only screen and (max-width: 425px) {
-  svg {
-    position: absolute;
-      /* width: 100%; */
-      top: 40%;
-      /* height: 100%; */
-      margin: auto;
-      left: 0;
-  }
 }
   ::-webkit-scrollbar {
     width: 3px;
@@ -191,7 +165,7 @@ h5{
     top: 20%;
   }
   .modal-content{
-    background-color: white !important;
+    background-color: transparent !important;
     font-size: .5em;
   }
   .modal-header{
@@ -200,10 +174,19 @@ h5{
   .modal-footer{
     border-top: 0px solid #dee2e6;
   }
-  .modal-header .close {
-    padding: 1rem 1rem;
-    margin: -1rem -1rem -1rem auto;
-    color: black;
+  .close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    /* text-shadow: 0 1px 0 #fff; */
+    // opacity: .5;
+}
+.close:hover{
+  color: #fff;
+    /* text-shadow: 0 1px 0 #fff; */
+    opacity: .5;
 }
 .modal-footer .btn{
   background:  #000;
