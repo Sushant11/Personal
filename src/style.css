@@ -144,11 +144,17 @@ h3:hover {
 
 .work {
   padding: 20px;
+  font-size: 2rem;
 }
 
 .work img {
   background: #fff;
   padding: 2px;
+}
+
+.about {
+  font-size: 1rem;
+  text-transform: none;
 }
 
 #contact a {
