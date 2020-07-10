@@ -1,0 +1,346 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+body {
+  color: #fff;
+  overflow-y: -webkit-paged-y;
+}
+
+.light {
+  background: transparent;
+  border: none;
+  position: fixed;
+  font-size: 20px;
+  margin: 8px -16px;
+  z-index: 1;
+}
+
+.main {
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(300px);
+      scroll-snap-points-y: repeat(300px);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.child {
+  scroll-snap-align: start;
+}
+
+.modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none !important;
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.dark-mode a {
+  color: black;
+}
+
+.dark-mode i {
+  color: white;
+  font-size: 1rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+.cube h3:focus {
+  outline: none;
+}
+
+.about {
+  font-size: 1rem;
+  text-transform: none;
+  background: black;
+  padding-top: 12px;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.light-mode a {
+  color: black;
+}
+
+.light-mode button {
+  background-color: transparent;
+  color: white;
+}
+
+.light-mode i {
+  color: black;
+  font-size: 1rem;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cube {
+  height: 50vh;
+  text-align: center;
+  position: relative;
+}
+
+.cube svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* Main styles */
+.text {
+  fill: none;
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-dasharray: 150 300;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 10s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #0cc1ce;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+.text:nth-child(5n + 2) {
+  stroke: black;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #4d4dff;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #00ff62bd;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #b3d7ff;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -475;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -475;
+  }
+}
+
+/* Other styles */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #111;
+  background-size: .2em 100%;
+  font: 5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+  margin: auto;
+  left: 0;
+}
+
+h3 {
+  font-family: "Megrim", cursive;
+  background: -webkit-gradient(linear, left top, right top, from(#59ddde), to(#5e1bb0));
+  background: linear-gradient(to right, #59ddde 0%, #5e1bb0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: .5em;
+  font-weight: bold;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+a {
+  margin: auto;
+  /* Important */
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h3:hover {
+  font-size: .7em;
+  background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#330867));
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.work {
+  padding: 3em;
+  font-size: 1rem;
+}
+
+.work img {
+  background: #fff;
+  padding: 2px;
+}
+
+.about {
+  font-size: 1rem;
+  text-transform: none;
+}
+
+#contact a {
+  font-family: "Megrim", cursive;
+  font-size: 1em;
+}
+
+.skill {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+h5 {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(#59ddde), to(#5e1bb0));
+  background: linear-gradient(to bottom, #59ddde 0%, #5e1bb0 100%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #33d399;
+}
+
+.modal-content {
+  background-color: transparent !important;
+  font-size: .5em;
+}
+
+.modal-header {
+  border-bottom: 0px solid #dee2e6;
+}
+
+.modal-footer {
+  border-top: 0px solid #dee2e6;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  /* text-shadow: 0 1px 0 #fff; */
+}
+
+.close:hover {
+  color: #fff;
+  /* text-shadow: 0 1px 0 #fff; */
+  opacity: .5;
+}
+
+.modal-footer .btn {
+  background: #000;
+  color: white;
+}
+
+.modal-body img {
+  height: 80px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 765px) {
+  .cube h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cube {
+    height: 100vh;
+    text-align: center;
+    position: relative;
+  }
+  .cube h3 {
+    padding-top: 85%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
